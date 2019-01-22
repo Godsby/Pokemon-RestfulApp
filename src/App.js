@@ -31,13 +31,13 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state.pokemon);
+
     if (this.state.loading) {
       return <>Loading </>
     }
     return (
       <div className="App">
-        <button onClick={this.handleChange}>{this.state.showing ? 'Hidden Pokemons' : 'Show Pokemons'}</button>
+        <button onClick={this.handleChange}>{this.state.showing ? 'Hidden Pokemons' : 'Show Pokemons'}</button><br /><br />
         { this.state.showing ? <Pokemon pokemon={this.state.pokemon} /> : null }
             
       </div>
